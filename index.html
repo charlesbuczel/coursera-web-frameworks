@@ -40,47 +40,82 @@
               </a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                  <li class="active">
-                    <a href="#">
-                      <span class="glyphicon glyphicon-home"></span>
-                        Home
-                    </a>
-                  </li>
-                  <li>
-                    <a href="aboutus.html">
-                      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-                       About
-                     </a>
-                  </li>
-                  <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                       role="button" aria-haspopup="true" aria-expanded="false">
-                       <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                        Menu <span class="caret"></span>
-                     </a>
-                      <ul class="dropdown-menu">
-                          <li><a href="#">Appetizers</a></li>
-                          <li><a href="#">Main Courses</a></li>
-                          <li><a href="#">Desserts</a></li>
-                          <li><a href="#">Drinks</a></li>
-                          <li role="separator" class="divider"></li>
-                          <li class="dropdown-header">Specials</li>
-                          <li><a href="#">Lunch Buffet</a></li>
-                          <li><a href="#">Weekend Brunch</a></li>
-                      </ul>
-                  </li>
-                  <li>
-                    <a href="contactus.html">
-                      <i class="fa fa-envelope-o"></i>
-                        Contact
-                    </a>
-                  </li>
-              </ul>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                  <a href="#">
+                    <span class="glyphicon glyphicon-home"></span>
+                      Home
+                  </a>
+                </li>
+                <li>
+                  <a href="aboutus.html">
+                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                     About
+                   </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                     role="button" aria-haspopup="true" aria-expanded="false">
+                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                      Menu <span class="caret"></span>
+                   </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Appetizers</a></li>
+                        <li><a href="#">Main Courses</a></li>
+                        <li><a href="#">Desserts</a></li>
+                        <li><a href="#">Drinks</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Specials</li>
+                        <li><a href="#">Lunch Buffet</a></li>
+                        <li><a href="#">Weekend Brunch</a></li>
+                    </ul>
+                </li>
+                <li>
+                  <a href="contactus.html">
+                    <i class="fa fa-envelope-o"></i>
+                      Contact
+                  </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a data-toggle="modal" data-target="#loginModal">
+                  <span class="glyphicon glyphicon-log-in"></span> Login
+                </a>
+              </li>
+            </ul>
           </div>
       </div>
   </nav>
+  <div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Login </h4>
+        </div>
+        <div class="modal-body">
 
+          <form class="form-inline" role="search">
+            <div class="form-group">
+              <label class="sr-only" for="email">Email address</label>
+              <input type="email" id="email" type="text" class="form-control input-sm" placeholder="Email">
+              <label class="sr-only" for="password">Password</label>
+              <input type="password" id="password" type="text" class="form-control input-sm" placeholder="Password">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Remember me
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-info btn-sm">Sign in</button>
+            <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
   <header class="jumbotron">
 
       <!-- Main component for a primary marketing message or call to action -->
@@ -95,6 +130,14 @@
               <div class="col-xs-12 col-sm-2">
                   <p style="padding:20px;"></p>
                   <img src="img/logo.png" class="img-responsive">
+              </div>
+              <div class="col-xs-12 col-sm-2">
+                <p style="padding:40px;"></p>
+                <a href="#reservation_form" type="button" class="btn btn-warning btn-block"
+                  data-toggle="tooltip" title="Or Call us at +852 12345678" data-placement="bottom"
+                >
+                  Reserve Table
+                </a>
               </div>
           </div>
       </div>
@@ -148,9 +191,27 @@
               <h3 align=center>This Month's Promotions</h3>
           </div>
           <div class="col-xs-12 col-sm-9">
-              <h2>Weekend Grand Buffet</h2>
-              <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-              <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+            <div class="media">
+              <div class="media-body">
+                <h2>
+                  Weekend Grand Buffet
+                  <span class="label label-danger">New</span>
+                </h2>
+                <p>
+                  Featuring mouthwatering combinations with a choice of five different salads,
+                  six enticing appetizers, six main entrees and five choicest desserts.
+                  Free flowing bubbly and soft drinks. All for just $19.99 per person
+                </p>
+                <p>
+                  <a class="btn btn-primary btn-xs" href="#">More &raquo;</a>
+                </p>
+              </div>
+              <div class="media-left media-middle">
+                <a href="#">
+                  <img class="media-object img-thumbnail" src="img/buffet.png" alt="Uthappizza">
+                </a>
+              </div>
+            </div>
           </div>
       </div>
 
@@ -177,6 +238,62 @@
                  </p>
                 <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
               </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="row row-content">
+          <div class="col-xs-12 col-sm-3">
+              <p style="padding:20px;"></p>
+              <h3 align=center>Reserve a Table</h3>
+          </div>
+          <div class="col-xs-12 col-sm-9">
+            <form class="form-horizontal" id="reservation_form">
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Number of Guests</label>
+                <div class="col-sm-10">
+                  <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option4"> 4
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option5"> 5
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option6"> 6
+                  </label>
+                </div>
+              </div>
+              <div class="form-group has-feedback">
+                <label class="col-sm-2 control-label">Date and Time</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" placeholder="Date">
+                  <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+                </div>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" placeholder="Time">
+                  <span class="glyphicon glyphicon-time form-control-feedback"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-primary">Reserve</button>
+                </div>
+              </div>
+            </form>
+            <div class="alert alert-warning alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <strong>Warning:</strong> Please <a href="tel:+85212345678">Call</a> us to reserve for more than six guests.
             </div>
           </div>
       </div>
@@ -229,6 +346,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
+  <script>
+      $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+      });
+  </script>
 </body>
 
 </html>
